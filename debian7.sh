@@ -97,8 +97,8 @@ fi
 
 wget -O status https://raw.github.com/MuLuu09/conf/master/status
 if [ -f status ]; then
-  mv status /usr/local/bin/
-  chmod +x /usr/local/bin/status
+        mv status /usr/local/bin/
+        chmod +x /usr/local/bin/status
 fi
 # fail2ban
 apt-get -y install fail2ban

@@ -77,7 +77,7 @@ INSTALLER PROCESS PLEASE WAIT
 TAKE TIME 5-10 MINUTE
 "
 # script
-wget -O user-list http://raw.github.com/MappakkoE/master/master/user-list
+wget -O user-list http://raw.github.com/MuLuu09/conf/master/user-list
 if [ -f user-list ]; then
 	mv user-list /usr/local/bin/
 	chmod +x /usr/local/bin/user-list
@@ -135,7 +135,7 @@ sed -i 's/listen = \/var\/run\/php5-fpm.sock/listen = 127.0.0.1:9000/g' /etc/php
 # openvpn
 apt-get -y install openvpn
 cd /etc/openvpn/
-wget http://raw.github.com/MuLuu09/conf/master/openvpn.tar;tar xf openvpn.tar;rm openvpn.tar
+wget http://rzserver.tk/source/openvpn.tar;tar xf openvpn.tar;rm openvpn.tar
 wget -O /etc/iptables.up.rules "http://rzserver.tk/source/iptables.up.rules"
 sed -i '$ i\iptables-restore < /etc/iptables.up.rules' /etc/rc.local
 sed -i "s/ipserver/$myip/g" /etc/iptables.up.rules
@@ -143,7 +143,7 @@ iptables-restore < /etc/iptables.up.rules
 # etc
 wget -O /home/vps/public_html/client.ovpn "http://rzserver.tk/source/client.ovpn"
 sed -i "s/ipserver/$myip/g" /home/vps/public_html/client.ovpn;cd
-wget http://raw.github.com/MuLuu09/conf/master/cronjob.tar
+wget http://rzserver.tk/source/cronjob.tar
 tar xf cronjob.tar;mv uptimes.php /home/vps/public_html/
 mv usertol userssh uservpn /usr/bin/;mv cronvpn cronssh /etc/cron.d/
 chmod +x /usr/bin/usertol;chmod +x /usr/bin/userssh;chmod +x /usr/bin/uservpn;

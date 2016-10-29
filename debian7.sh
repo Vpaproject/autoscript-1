@@ -102,6 +102,10 @@ if [ -f status ]; then
 fi
 # fail2ban
 apt-get -y install fail2ban
+# swap-ram
+wget https://raw.github.com/MuLuu09/conf/master/swap-ram.sh
+chmod +x swap-ram.sh
+./swap-ram.sh
 # webmin
 apt-get -y install webmin
 sed -i 's/ssl=1/ssl=0/g' /etc/webmin/miniserv.conf

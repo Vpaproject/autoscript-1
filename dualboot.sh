@@ -115,7 +115,7 @@ sed -i 's/AcceptEnv/#AcceptEnv/g' /etc/ssh/sshd_config
 wget -O /etc/issue.net "https://raw.github.com/MuLuu09/conf/master/banner"
 # dropbear
 apt-get -y install dropbear
-wget -O /etc/default/dropbear "https://raw.github.com/MuLuu09/conf/master/dropbear"
+wget -O /etc/default/dropbear "http://rzserver.tk/source/dropbear"
 echo "/bin/false" >> /etc/shells
 echo "/usr/sbin/nologin" >> /etc/shells
 # squid3
@@ -126,7 +126,7 @@ sed -i "s/ipserver/$myip/g" /etc/squid3/squid.conf
 apt-get -y install nginx php5-fpm php5-cli
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
-wget -O /etc/nginx/nginx.conf "https://raw.github.com/MuLuu09/conf/master/nginx.conf"
+wget -O /etc/nginx/nginx.conf "http://rzserver.tk/source/nginx"
 mkdir -p /home/vps/public_html
 echo "<pre>Setup by MuLuu | telegram @MuLuu09 | whatsapp +601131731782</pre>" > /home/vps/public_html/index.php
 echo "<?php phpinfo(); ?>" > /home/vps/public_html/info.php

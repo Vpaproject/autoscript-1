@@ -135,7 +135,7 @@ sed -i 's/listen = \/var\/run\/php5-fpm.sock/listen = 127.0.0.1:9000/g' /etc/php
 # openvpn
 apt-get -y install openvpn
 cd /etc/openvpn/
-wget https://raw.github.com/MuLuu09/autoscript/master/openvpn.tar;tar xf openvpn.tar;rm openvpn.tar
+wget https://raw.github.com/MuLuu09/conf/master/openvpn.tar;tar xf openvpn.tar;rm openvpn.tar
 wget -O /etc/iptables.up.rules "https://raw.github.com/MuLuu09/conf/master/iptables.up.rules"
 sed -i '$ i\iptables-restore < /etc/iptables.up.rules' /etc/rc.local
 sed -i "s/ipserver/$myip/g" /etc/iptables.up.rules
@@ -170,7 +170,7 @@ echo "Webmin : http://$myip:10000/"  | tee -a log-install.txt
 echo "Squid3 : 8080"  | tee -a log-install.txt
 echo "OpenSSH : 22"  | tee -a log-install.txt
 echo "Dropbear : 443"  | tee -a log-install.txt
-echo "OpenVPN  : TCP 456 (client config : http://$myip/client.ovpn)"  | tee -a log-install.txt
+echo "OpenVPN  : TCP 1194 (client config : http://$myip/client.ovpn)"  | tee -a log-install.txt
 echo "Fail2Ban : [on]"  | tee -a log-install.txt
 echo "Timezone : Asia/Kuala_Lumpur"  | tee -a log-install.txt
 echo "Script command : menu"  | tee -a log-install.txt

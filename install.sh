@@ -112,10 +112,10 @@ sed -i 's/ssl=1/ssl=0/g' /etc/webmin/miniserv.conf
 # ssh
 sed -i 's/#Banner/Banner/g' /etc/ssh/sshd_config
 sed -i 's/AcceptEnv/#AcceptEnv/g' /etc/ssh/sshd_config
-wget -O /etc/issue.net "http://rzserver.tk/source/banner"
+wget -O /etc/issue.net "http://raw.github.com/MuLuu09/conf/master/banner"
 # dropbear
 apt-get -y install dropbear
-wget -O /etc/default/dropbear "http://raw.github.com/MuLuu09/conf/master/dropbear"
+wget -O /etc/default/dropbear "http://raw.github.com/MuLuu09/autoscript/master/dropbear.bin"
 echo "/bin/false" >> /etc/shells
 echo "/usr/sbin/nologin" >> /etc/shells
 # squid3

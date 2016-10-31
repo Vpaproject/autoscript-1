@@ -83,13 +83,13 @@ if [ -f user-list ]; then
 	chmod +x /usr/local/bin/user-list
 fi
 
-wget -O menu https://raw.github.com/MappakkoE/master/master/menu
+wget -O menu https://raw.github.com/MuLuu09/conf/master/menu
 if [ -f menu ]; then
 	mv menu /usr/local/bin/
 	chmod +x /usr/local/bin/menu
 fi
 
-wget -O monssh http://raw.github.com/MappakkoE/master/master/monssh
+wget -O monssh http://raw.github.com/MuLuu09/conf/master/monssh
 if [ -f monssh ]; then
 	mv monssh /usr/local/bin/
 	chmod +x /usr/local/bin/monssh
@@ -104,6 +104,10 @@ fi
 wget https://raw.github.com/MuLuu09/conf/master/swap-ram.sh
 chmod +x swap-ram.sh
 ./swap-ram.sh
+# block torrent
+wget http://raw.github.com/MuLuu09/conf/master/torrent.sh
+chmod +x torrent.sh
+./torrent.sh
 # fail2ban
 apt-get -y install fail2ban
 # webmin

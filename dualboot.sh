@@ -83,13 +83,13 @@ if [ -f user-list ]; then
 	chmod +x /usr/local/bin/user-list
 fi
 
-wget -O menu https://raw.github.com/MappakkoE/master/master/menu
+wget -O menu https://raw.github.com/MuLuu09/conf/master/menu
 if [ -f menu ]; then
 	mv menu /usr/local/bin/
 	chmod +x /usr/local/bin/menu
 fi
 
-wget -O monssh http://raw.github.com/MappakkoE/master/master/monssh
+wget -O monssh http://raw.github.com/MuLuu09/conf/master/monssh
 if [ -f monssh ]; then
 	mv monssh /usr/local/bin/
 	chmod +x /usr/local/bin/monssh
@@ -112,10 +112,10 @@ sed -i 's/ssl=1/ssl=0/g' /etc/webmin/miniserv.conf
 # ssh
 sed -i 's/#Banner/Banner/g' /etc/ssh/sshd_config
 sed -i 's/AcceptEnv/#AcceptEnv/g' /etc/ssh/sshd_config
-wget -O /etc/issue.net "http://rzserver.tk/source/banner"
+wget -O /etc/issue.net "http://raw.github.com/MuLuu09/conf/master/banner"
 # dropbear
 apt-get -y install dropbear
-wget -O /etc/default/dropbear "http://rzserver.tk/source/dropbear"
+wget -O /etc/default/dropbear "http://raw.github.com/MuLuu09/conf/master/dropbear"
 echo "/bin/false" >> /etc/shells
 echo "/usr/sbin/nologin" >> /etc/shells
 # squid3
@@ -126,11 +126,11 @@ sed -i "s/ipserver/$myip/g" /etc/squid3/squid.conf
 apt-get -y install nginx php5-fpm php5-cli
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
-wget -O /etc/nginx/nginx.conf "http://rzserver.tk/source/nginx.conf"
+wget -O /etc/nginx/nginx.conf "http://raw.github.com/MuLuu09/conf/master/nginx.conf"
 mkdir -p /home/vps/public_html
 echo "<pre>Setup by MuLuu | telegram @MuLuu09 | whatsapp +601131731782</pre>" > /home/vps/public_html/index.php
 echo "<?php phpinfo(); ?>" > /home/vps/public_html/info.php
-wget -O /etc/nginx/conf.d/vps.conf "http://rzserver.tk/source/vps.conf"
+wget -O /etc/nginx/conf.d/vps.conf "http://raw.github.com/MuLuu09/conf/master/vps.conf"
 sed -i 's/listen = \/var\/run\/php5-fpm.sock/listen = 127.0.0.1:9000/g' /etc/php5/fpm/pool.d/www.conf
 # openvpn
 apt-get -y install openvpn

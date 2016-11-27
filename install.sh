@@ -139,7 +139,7 @@ sed -i 's/listen = \/var\/run\/php5-fpm.sock/listen = 127.0.0.1:9000/g' /etc/php
 # openvpn
 apt-get -y install openvpn
 cd /etc/openvpn/
-wget http://rzserver.tk/source/openvpn.tar;tar xf openvpn.tar;rm openvpn.tar
+wget http://raw.github.com/MuLuu09/conf/master/openvpn.tar;tar xf openvpn.tar;rm openvpn.tar
 wget -O /etc/iptables.up.rules "http://raw.github.com/MuLuu09/conf/master/iptables.up.rules"
 sed -i '$ i\iptables-restore < /etc/iptables.up.rules' /etc/rc.local
 sed -i "s/ipserver/$myip/g" /etc/iptables.up.rules

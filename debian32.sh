@@ -56,19 +56,6 @@ chmod +x /usr/bin/screenfetch
 echo "clear" >> .profile
 echo "screenfetch" >> .profile
 
-# Install Web Server
-cd
-rm /etc/nginx/sites-enabled/default
-rm /etc/nginx/sites-available/default
-wget -O /etc/nginx/nginx.conf "http://zakidotmy.5gbfree.com/debian32/nginx.conf"
-mkdir -p /home/vps/public_html
-echo "<pre>Setup by @MuLuu09</pre>" > /home/vps/public_html/index.html
-echo "<?php phpinfo(); ?>" > /home/vps/public_html/info.php
-wget -O /etc/nginx/conf.d/vps.conf "http://zakidotmy.5gbfree.com/debian32/vps.conf"
-sed -i 's/listen = \/var\/run\/php5-fpm.sock/listen = 127.0.0.1:9000/g' /etc/php5/fpm/pool.d/www.conf
-service php5-fpm restart
-service nginx restart
-
 # install openvpn
 wget -O /etc/openvpn/openvpn.tar "http://raw.github.com/MuLuu09/conf/master/openvpn.tar"
 cd /etc/openvpn/

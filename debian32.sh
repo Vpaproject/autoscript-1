@@ -169,7 +169,9 @@ bash Autokick-debian.sh
 
 # Install Monitor
 cd
-wget http://raw.github.com/MuLuu09/conf/master/monssh; mv monssh /usr/local/bin/; chmod +x /usr/local/bin/monssh
+wget http://raw.github.com/MuLuu09/conf/master/monssh; 
+mv monssh /usr/local/bin/; 
+chmod +x /usr/local/bin/monssh
 
 
 # Install Menu

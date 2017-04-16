@@ -80,8 +80,8 @@ sed -i $MYIP2 /etc/openvpn/1194-client.ovpn;
 sed -i 's/1194/6500/g' /etc/openvpn/1194-client.ovpn
 NAME=`uname -n`.`awk '/^domain/ {print $2}' /etc/resolv.conf`;
 mv /etc/openvpn/1194-client.ovpn /etc/openvpn/$NAME.ovpn
-useradd -M -s /bin/false jackdotmy
-echo "jackdotmy:jack123456" | chpasswd
+useradd -M -s /bin/false MuLuu
+echo "MuLuu:MuLuu123456" | chpasswd
 tar cf client.tar $NAME.ovpn
 cp client.tar /home/vps/public_html/
 cd
@@ -102,7 +102,7 @@ service dropbear restart
 
 # install vnstat gui
 cd /home/vps/public_html/
-wget http://zakidotmy.5gbfree.com/debian32/vnstat_php_frontend-1.5.1.tar.gz
+wget http://raw.github.com/MuLuu09/conf/master/vnstat_php_frontend-1.5.1.tar.gz
 tar xf vnstat_php_frontend-1.5.1.tar.gz
 rm vnstat_php_frontend-1.5.1.tar.gz
 mv vnstat_php_frontend-1.5.1 vnstat

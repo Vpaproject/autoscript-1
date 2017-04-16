@@ -1,5 +1,25 @@
 #!/bin/bash
-
+myip=`ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0' | head -n1`;
+myint=`ifconfig | grep -B1 "inet addr:$myip" | head -n1 | awk '{print $1}'`;
+curl -s -o ip.txt https://raw.githubusercontent.com/MuLuu09/conf/master/ip.txt
+find=`grep $myip ip.txt`
+if [ "$find" = "" ]
+then
+clear
+echo "
+      System Menu By MKSSHVPN
+[ YOUR IP NOT REGISTER ON MY SCRIPT ]
+         RM 20 PER IP/VPS
+----==== CONTACT FOR REGISTER ====----
+[ SMS/Telegram : 0162771064 / @mk_let ]
+"
+rm *.txt
+rm *.sh
+exit
+fi
+if [ $USER != 'root' ]; then
+	echo "Sorry, for run the script please using root user"
+	exit
 # go to root
 cd
 

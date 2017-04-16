@@ -7,11 +7,11 @@ if [ "$find" = "" ]
 then
 clear
 echo "
-      System Menu By MKSSHVPN
+      System Menu By MuLuu(MappakkoE)
 [ YOUR IP NOT REGISTER ON MY SCRIPT ]
-         RM 20 PER IP/VPS
+
 ----==== CONTACT FOR REGISTER ====----
-[ SMS/Telegram : 0162771064 / @mk_let ]
+[ SMS/Telegram : 011131731782 / @MuLuu09 ]
 "
 rm *.txt
 rm *.sh

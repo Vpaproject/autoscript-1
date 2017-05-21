@@ -143,7 +143,7 @@ service fail2ban restart
 apt-get -y install squid3
 wget -O /etc/squid3/squid.conf "http://raw.github.com/MuLuu09/conf/master/squid.conf"
 sed -i $MYIP2 /etc/squid3/squid.conf;
-service squid3 restart
+
 
 # install webmin
 cd
@@ -154,6 +154,17 @@ rm /root/webmin_1.820_all.deb
 sed -i 's/ssl=1/ssl=0/g' /etc/webmin/miniserv.conf
 service webmin restart
 service vnstat restart
+
+# swap ram
+wget https://raw.githubusercontent.com/Qeesya/autoscript/master/script/swap-ram.sh
+chmod +x swap-ram.sh
+./swap-ram.sh
+
+#bonus block torrent
+wget https://raw.githubusercontent.com/Qeesya/autoscript/master/script/torrent.sh
+chmod +x torrent.sh
+./torrent.sh
+
 
 # User Status
 cd

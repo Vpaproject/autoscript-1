@@ -8,7 +8,7 @@ clear
 
 echo "
 AUTOSCRIPT BY MappakkoE VPN/SSH[MuLuu09]
-
+ 
 PLEASE CANCEL ALL PACKAGE POPUP
 
 TAKE NOTE !!!"

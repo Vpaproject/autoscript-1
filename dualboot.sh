@@ -5,26 +5,7 @@ find=`grep $myip ip.txt`
 if [ "$find" = "" ]
 then
 clear
-echo "
 
-      System by MappakkoE
-
-[ YOU IP NOT REGISTER FOR MY AUTOSCRIPT ]
-
-     A   U   T   O  -  E   X   I   T
-
-\/\/\/\/\/\/ FOR REGISTER \/\/\/\/\/\/
-[ SMS/Telegram/Whatsapp: +01131731782 ]
-
-"
-rm *.txt
-rm *.sh
-exit
-fi
-if [ $USER != 'root' ]; then
-	echo "Sorry, for run the script please using root user"
-	exit
-fi
 echo "
 AUTOSCRIPT BY MappakkoE VPN/SSH[MuLuu09]
 
